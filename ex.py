@@ -5,7 +5,8 @@ def attack(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} нанёс противнику урон, равный '
                 f'{5 + randint(3, 5)}')
-    if char_class == 'mage':
+    if char_class == 'mage' \
+                     '':
         return (f'{char_name} нанёс противнику урон, равный '
                 f'{5 + randint(5, 10)}')
     if char_class == 'healer':
@@ -81,10 +82,13 @@ def choice_char_class():
 def main():
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
-    char_name = input('...назови себя: ')
+    #char_name: str = input('...назови себя: ')
+    char_name: str = 'Alex'
     print(f'Здравствуй, {char_name}! '
           'Сейчас твоя выносливость — 80, атака — 5 и защита — 10.')
     print('Ты можешь выбрать один из трёх путей силы:')
     print('Воитель, Маг, Лекарь')
-    char_class = choice_char_class()
+    char_class: str = choice_char_class()
     print(start_training(char_name, char_class))
+
+main()
